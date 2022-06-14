@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome To Murad&#39;s Portfolio on Murad Farhan</title>
+    <link>https://da-murad.github.io/Murad-Portfolio/</link>
+    <description>Recent content in Welcome To Murad&#39;s Portfolio on Murad Farhan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jun 2022 10:58:08 -0400</lastBuildDate><atom:link href="https://da-murad.github.io/Murad-Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project I: Cyclistic bike-share v1</title>
+      <link>https://da-murad.github.io/Murad-Portfolio/post/project-1/</link>
+      <pubDate>Wed, 08 Jun 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://da-murad.github.io/Murad-Portfolio/post/project-1/</guid>
+      <description>Introduction In this case study, I will perform data analysis for a fictional bike-share called Cyclistic.In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.Customers who purchase single-ride or full-day passes are referred to as casual riders.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://da-murad.github.io/Murad-Portfolio/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://da-murad.github.io/Murad-Portfolio/about/</guid>
+      <description>Muarad Farhan a data analytics (1997) I am a thorough and meticulous Data Analyst passionate about helping businesses succeed. Experienced in interpreting and analyzing data to drive growth for a business. Possessing strong technical skills rooted in substantial training as an data analysis to turn over the raw data to visual data, plot, figure, and/or presentation by analyzing the data which will help satkeholders to make decisions and know the current status of the data analyzed.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://da-murad.github.io/Murad-Portfolio/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://da-murad.github.io/Murad-Portfolio/contact/</guid>
+      <description>Follow me on these platforms and social media
+Platform URL Kaggel https://www.kaggle.com/muradfarhan GitHub https://github.com/DA-MURAD Linkedin https://www.linkedin.com/in/murad-farhan-455a79220/ Public.Tableau https://public.tableau.com/app/profile/murad.ahmed.abdullah.farhan </description>
+    </item>
+    
+  </channel>
+</rss>

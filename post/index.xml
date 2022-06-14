@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Murad Farhan</title>
+    <link>https://da-murad.github.io/Murad-Portfolio/post/</link>
+    <description>Recent content in Projects on Murad Farhan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://da-murad.github.io/Murad-Portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project I: Cyclistic bike-share v1</title>
+      <link>https://da-murad.github.io/Murad-Portfolio/post/project-1/</link>
+      <pubDate>Wed, 08 Jun 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://da-murad.github.io/Murad-Portfolio/post/project-1/</guid>
+      <description>Introduction In this case study, I will perform data analysis for a fictional bike-share called Cyclistic.In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.Customers who purchase single-ride or full-day passes are referred to as casual riders.</description>
+    </item>
+    
+  </channel>
+</rss>
