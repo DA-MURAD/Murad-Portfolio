@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL Projects on Murad Farhan</title>
+    <link>https://da-murad.github.io/Murad-Portfolio/tags/sql-projects/</link>
+    <description>Recent content in SQL Projects on Murad Farhan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Dec 2022 10:58:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://da-murad.github.io/Murad-Portfolio/tags/sql-projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 2:Profiling and Analyzing the Yelp Dataset With SQL</title>
+      <link>https://da-murad.github.io/Murad-Portfolio/post/project-2/</link>
+      <pubDate>Thu, 08 Dec 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://da-murad.github.io/Murad-Portfolio/post/project-2/</guid>
+      <description>Introduction I will be using a dataset from a US-based organization called Yelp, which provides a platform for users to provide reviews and rate their interactions with a variety of organizations – businesses, restaurants, health clubs, hospitals, local governmental offices, charitable organizations, etc. Yelp has made a portion of this data available for personal, educational, and academic purposes.
+I will perform profile and better understand the data in the first part of the case study.</description>
+    </item>
+    
+  </channel>
+</rss>

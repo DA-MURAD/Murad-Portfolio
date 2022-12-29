@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project I: Cyclistic bike-share With R | Murad Farhan</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Analysing a google capstone project Bike share trips using R">
+    <meta name="generator" content="Hugo 0.71.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://da-murad.github.io/Murad-Portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project I: Cyclistic bike-share With R" />
+<meta property="og:description" content="Analysing a google capstone project Bike share trips using R" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://da-murad.github.io/Murad-Portfolio/post/project-1/" />
+<meta property="article:published_time" content="2022-06-08T10:58:08-04:00" />
+<meta property="article:modified_time" content="2022-06-08T10:58:08-04:00" /><meta property="og:site_name" content="Murad Farhan" />
+<meta itemprop="name" content="Project I: Cyclistic bike-share With R">
+<meta itemprop="description" content="Analysing a google capstone project Bike share trips using R">
+<meta itemprop="datePublished" content="2022-06-08T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2022-06-08T10:58:08-04:00" />
+<meta itemprop="wordCount" content="1663">
+
+
+
+<meta itemprop="keywords" content="R Projects," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project I: Cyclistic bike-share With R"/>
+<meta name="twitter:description" content="Analysing a google capstone project Bike share trips using R"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://da-murad.github.io/Murad-Portfolio/images/Average%20number%20Of%20Rides%20By%20Day.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://da-murad.github.io/Murad-Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Murad Farhan
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://da-murad.github.io/Murad-Portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://da-murad.github.io/Murad-Portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://da-murad.github.io/Murad-Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/murad-farhan-455a79220/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Project I: Cyclistic bike-share With R</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Analysing a google capstone project Bike share trips using R
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://da-murad.github.io/Murad-Portfolio/post/project-1/&amp;title=Project%20I:%20Cyclistic%20bike-share%20With%20R" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project I: Cyclistic bike-share With R</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-06-08T10:58:08-04:00">June 8, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="introduction">Introduction</h3>
+<p>In this case study, I will perform data analysis for a fictional bike-share called Cyclistic.In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and
+returned to any other station in the system anytime.Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members. Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. The director of marketing and my manage that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers,The director of marketing believes there is a very good chance to convert casual riders into members.</p>
+<h3 id="scenario">Scenario</h3>
+<p>I work as a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago.The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, my team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, my team will design a new marketing strategy to convert casual riders into annual members.</p>
+<h3 id="phase-one-ask">Phase One: Ask</h3>
+<ul>
+<li>
+<p>Identifying The Kesy stakeholders</p>
+<ul>
+<li>Primary stakeholder - the director of marketing (my manager)</li>
+<li>Secondary stakeholders - the marketing analytics team and the executive team</li>
+</ul>
+</li>
+<li>
+<p>Business Task</p>
+<ul>
+<li>identify how casual riders and annual members use Cyclistic bikes differently ?</li>
+</ul>
+</li>
+<li>
+<p>Deliverable</p>
+<ul>
+<li>Figures to understant the differences in bike usage among casual and member users in     order to recommend how to encourage casual riders to become members.</li>
+</ul>
+</li>
+</ul>
+<h3 id="phase-two-prepare">Phase Two: Prepare</h3>
+<ul>
+<li>
+<p>I will be using the public dataset located <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">here</a>.The data has been made available by Motivate International Inc. under this <a href="https://ride.divvybikes.com/data-license-agreement">license</a>
+This is public data that you can use to explore how different customer types are
+using Cyclistic bikes. But note that data-privacy issues prohibit you from using riders’ personally identifiable information. This means that you won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.</p>
+</li>
+<li>
+<p>The dataset follows the ROCCC Analysis as described below:</p>
+<ul>
+<li>
+<p>Reliable - yes, not biased</p>
+</li>
+<li>
+<p>Original - yes, can locate the original public data</p>
+</li>
+<li>
+<p>Comprehensive - yes, not missing important information</p>
+</li>
+<li>
+<p>Current - yes, updated monthly</p>
+</li>
+<li>
+<p>Cited - yes</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>So to prepare the data I have downloaded the last 12 months (May 2021 - Apr 2022) which is the required datasets to answer our questions. we save it appropriate in a file and I renamed them to be easly to read and uderstant. I used this (Month_Year_Name of the dateset) file converting name style.</p>
+<h3 id="phase-three-process">Phase Three: Process</h3>
+<p>I tried processing this data in Excel but accordin to the Excel limitation of data processing, I use Rstudio Desktop  for storage reasons, Rstudio Desktop was a better fit.</p>
+<h4 id="31-reading-the-pckages-into-r">3.1 Reading The Pckages into R</h4>
+<pre><code class="language-{r}" data-lang="{r}">library(tidyverse)
+library(lubridate)
+library(janitor)
+library(scales)
+library(dplyr)
+library(tibble)
+
+</code></pre><h4 id="32-uploading--datasets-csv-files-here">3.2 Uploading  datasets (csv files) here</h4>
+<p>Previous 12 months (from May, 2021 to Apr, 2022) of Cyclistic trip</p>
+<pre><code class="language-{r}" data-lang="{r}">May_2021_divvy_tripdata &lt;- read_csv(&quot;data/May 2021-divvy-tripdata.csv&quot;)
+Jun_2021_divvy_tripdata &lt;- read_csv(&quot;data/Jun 2021-divvy-tripdata.csv&quot;)
+Jul_2021_divvy_tripdata &lt;- read_csv(&quot;data/Jul 2021-divvy-tripdata.csv&quot;)
+Aug_2021_divvy_tripdata &lt;- read_csv(&quot;data/Aug 2021-divvy-tripdata.csv&quot;)
+sep_2021_divvy_tripdata &lt;- read_csv(&quot;data/Sep 2021-divvy-tripdata.csv&quot;)
+Oct_2021_divvy_tripdata &lt;- read_csv(&quot;data/Oct 2021-divvy-tripdata.csv&quot;)
+Nov_2021_divvy_tripdata &lt;- read_csv(&quot;data/Nov 2021-divvy-tripdata.csv&quot;)
+Dec_2021_divvy_tripdata &lt;- read_csv(&quot;data/Dec 2021-divvy-tripdata.csv&quot;)
+Jan_2022_divvy_tripdata &lt;- read_csv(&quot;data/Jan 2022-divvy-tripdata.csv&quot;)
+Feb_2022_divvy_tripdata &lt;- read_csv(&quot;data/Feb 2022-divvy-tripdata.csv&quot;)
+Mar_2022_divvy_tripdata &lt;- read_csv(&quot;data/Mar 2022-divvy-tripdata.csv&quot;)
+Apr_2022_divvy_tripdata &lt;- read_csv(&quot;data/Apr 2022-divvy-tripdata.csv&quot;)
+</code></pre><h4 id="33-wrangle-data-and-combine-into-a-single-file">3.3 WRANGLE DATA AND COMBINE INTO A SINGLE FILE</h4>
+<ul>
+<li>Display each column name and check for consistency</li>
+</ul>
+<p>in order to combine the data sets into one single dataframe it&rsquo;s prefered to
+display each column name , type and check for consistency</p>
+<pre><code class="language-{r}" data-lang="{r}">str(May_2021_divvy_tripdata)
+str(Jun_2021_divvy_tripdata)
+str(Jul_2021_divvy_tripdata)
+str(Aug_2021_divvy_tripdata)
+str(sep_2021_divvy_tripdata)
+str(Oct_2021_divvy_tripdata)
+str(Nov_2021_divvy_tripdata)
+str(Dec_2021_divvy_tripdata)
+str(Jan_2022_divvy_tripdata)
+str(Feb_2022_divvy_tripdata)
+str(Mar_2022_divvy_tripdata)
+
+</code></pre><p>all data sets having the same data types for each column</p>
+<ul>
+<li>combine data frames into one big data frame called (Cyclistic-trips)</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">
+Cyclistic_trips &lt;- rbind(May_2021_divvy_tripdata,Jun_2021_divvy_tripdata,                                 Jul_2021_divvy_tripdata,Aug_2021_divvy_tripdata,
+                         sep_2021_divvy_tripdata,Oct_2021_divvy_tripdata,
+                         Nov_2021_divvy_tripdata,Dec_2021_divvy_tripdata,
+                         Jan_2022_divvy_tripdata,Feb_2022_divvy_tripdata,
+                         Mar_2022_divvy_tripdata)
+
+dim(Cyclistic_trips) # to check how many rows and columns 
+</code></pre><h4 id="34-remove-empty-records-and-unneeded-columns">3.4 remove empty records and unneeded columns</h4>
+<p>now after we combine data frames into one dataframe its easy to clean the data by removing the empty records and unneeded columns using the janitor package.</p>
+<pre><code class="language-{r}" data-lang="{r}">
+Cyclistic_trips &lt;- janitor:: remove_empty(Cyclistic_trips, which = c(&quot;cols&quot;))
+Cyclistic_trips &lt;- janitor:: remove_empty(Cyclistic_trips, which = c(&quot;rows&quot;))
+Cyclistic_trips &lt;- Cyclistic_trips %&gt;%  select(-c(start_lat, start_lng, end_lat, end_lng))
+
+dim(Cyclistic_trips) # to see if the column removed
+</code></pre><h4 id="35--adding-new-coloumn">3.5  adding new coloumn</h4>
+<ul>
+<li>
+<p>I added three coloumn (Ymd refers to the date , Start_hour for the started at hour and ended_hour refers to the end time of the trips by hour )</p>
+</li>
+<li>
+<p>adding a column to measure the duration of trips (ended_at - started_at)</p>
+</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">
+Cyclistic_trips$Ymd &lt;- as.Date(Cyclistic_trips$started_at)
+Cyclistic_trips$Wday &lt;- lubridate::wday(Cyclistic_trips$Ymd,label = TRUE)
+Cyclistic_trips$day &lt;- lubridate::wday(Cyclistic_trips$Ymd,label = FALSE)
+Cyclistic_trips$month &lt;- lubridate::month(Cyclistic_trips$Ymd,label = TRUE)
+Cyclistic_trips$year &lt;- lubridate::year(Cyclistic_trips$Ymd)
+Cyclistic_trips$start_hour &lt;- lubridate::hour(Cyclistic_trips$started_at)
+Cyclistic_trips$ended_hour &lt;- lubridate::hour(Cyclistic_trips$ended_at)
+
+
+Cyclistic_trips$trips_duration &lt;- difftime(Cyclistic_trips$ended_at,Cyclistic_trips$started_at)
+
+Cyclistic_trips$trips_duration &lt;- as.numeric(as.character(Cyclistic_trips$trips_duration))
+
+glimpse(Cyclistic_trips)##
+
+
+</code></pre><p>#3.6 creating a clean dataframe to start analysis</p>
+<p>because of the value in trips_duration is in seconds We want to concentrate on trip duration that are greater than zero. We will therefore, create a new dataset specifying trip durations (trips_duration) greater than 0</p>
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1&lt;- Cyclistic_trips[!(Cyclistic_trips$trips_duration &lt;= 0),]
+</code></pre><h3 id="phase-four-analyizing">Phase four: Analyizing</h3>
+<ul>
+<li>conduct descriptive analysis on trips_duration (all figures in minutes)</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">
+#We can get mean, median, max and minimum ride_length by using the summary() function as below:
+  
+summary(Cyclistic_trips_v1$trips_duration)
+
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/trips%20duration%20summary.png"/> 
+</figure>
+
+<p>The max duration are in seconds. so its 932 hours</p>
+<ul>
+<li>for further statistics comparison of trips_duration  grouping by the type of rider i.e( member or casual)</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">aggregate(Cyclistic_trips_v1$trips_duration ~ Cyclistic_trips_v1$member_casual, FUN = mean)
+aggregate(Cyclistic_trips_v1$trips_duration ~ Cyclistic_trips_v1$member_casual, FUN = median)
+aggregate(Cyclistic_trips_v1$trips_duration ~ Cyclistic_trips_v1$member_casual, FUN = max)
+aggregate(Cyclistic_trips_v1$trips_duration ~ Cyclistic_trips_v1$member_casual, FUN = min)
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/trips_duration%20mean%20.png"/> 
+</figure>
+
+<ul>
+<li>We can further analyze the data by finding out the average ride length for each type of rider (casual or member) by the day of the week.</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1$Wday &lt;- lubridate::wday(Cyclistic_trips_v1$Ymd,label = TRUE)
+
+
+#average ride time by each day for members vs casual
+aggregate(Cyclistic_trips_v1$trips_duration ~ Cyclistic_trips_v1$member_casual + Cyclistic_trips_v1$Wday, FUN = mean)
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/trips_duration%20mean%20by%20days%20.png"/> 
+</figure>
+
+<ul>
+<li>We can also summarize the trips_duration data by type of rider and weekday while at the same time calculate the number of rides and the average duration</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1 %&gt;% 
+  mutate(weekday = wday(started_at, label = TRUE)) %&gt;%  #creates weekday field using   wday()
+  group_by(member_casual, weekday) %&gt;%  #groups by usertype and weekday
+  summarise(number_of_rides = n()  #calculates the number of rides  
+  ,average_duration = mean(trips_duration)) %&gt;% # calculates the average duration
+  arrange(member_casual, weekday)  # sorts          
+  
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/most%20day%20to%20ride.png"/> 
+</figure>
+
+<ul>
+<li>Comparing general bike type preference between members and casual riders</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1 %&gt;% 
+  group_by(rideable_type, member_casual) %&gt;% 
+  summarize(number_of_rides = n(), .groups = 'drop')
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/most%20popular.png"/> 
+</figure>
+
+<ul>
+<li>for more analysis to define which top 10 stations for each rider type (casual or memeber ) we will separate the data frame by rider type and combine the start and end stations</li>
+</ul>
+<pre><code class="language-{r}" data-lang="{r}">
+# Combine start and end stations
+# Removing entries with no station name
+# Separate the data frame by rider type
+all_stations &lt;- bind_rows(data.frame(&quot;stations&quot; = Cyclistic_trips_v1$start_station_name, 
+                                     &quot;member_casual&quot; = Cyclistic_trips_v1$member_casual),
+                          data.frame(&quot;stations&quot; = Cyclistic_trips_v1$end_station_name,
+                                     &quot;member_casual&quot; = Cyclistic_trips_v1$member_casual))
+all_stations_v2 &lt;- all_stations[!(all_stations$stations == &quot;&quot; | is.na(all_stations$stations)),]
+all_stations_member &lt;- all_stations_v2[all_stations_v2$member_casual == 'member',]
+all_stations_casual &lt;- all_stations_v2[all_stations_v2$member_casual == 'casual',]
+
+# Get the top 10 popular stations all, members, and casual riders
+top_10_station &lt;- all_stations_v2 %&gt;% 
+  group_by(stations) %&gt;% 
+  summarise(station_count = n()) %&gt;% 
+  arrange(desc(station_count)) %&gt;% 
+  slice(1:10)
+
+top_10_station_member &lt;- all_stations_member %&gt;% 
+  group_by(stations) %&gt;% 
+  summarise(station_count = n()) %&gt;% 
+  arrange(desc(station_count)) %&gt;% 
+  head(n=10)
+
+top_10_station_casual &lt;- all_stations_casual %&gt;% 
+  group_by(stations) %&gt;% 
+  summarise(station_count = n()) %&gt;% 
+  arrange(desc(station_count))
+
+</code></pre><h3 id="phase-four-visualizing">Phase four: Visualizing</h3>
+<pre><code class="language-{r}" data-lang="{r}">
+Cyclistic_trips_v1%&gt;% 
+  group_by(member_casual, Wday) %&gt;% 
+  summarise(number_of_rides = n(), .groups = 'drop') %&gt;% 
+  #arrange(member_casual, day_of_week) %&gt;% 
+  ggplot(aes(x = Wday, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = &quot;stack&quot;) + scale_y_continuous(labels = scales::comma) +
+  labs(x = &quot;Day of Week&quot;, y = &quot;Number of Rides&quot;, fill = &quot;Member/Casual&quot;,
+       title = &quot;Average Number of Rides by Day: Members vs. Casual Riders&quot;)
+
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/Average%20number%20Of%20Rides%20By%20Dayv1.png"/> 
+</figure>
+
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1 %&gt;% 
+  group_by(member_casual, Wday) %&gt;% 
+  summarise(average_duration = mean(trips_duration), .groups = 'drop') %&gt;% 
+  #arrange(member_casual, day_of_week) %&gt;% 
+  ggplot(aes(x = Wday, y = average_duration, fill = member_casual)) +
+  geom_col(position = &quot;nudge&quot;) +
+  labs(x = &quot;Day of Week&quot;, y = &quot;Average Duration (min)&quot;, 
+       fill = &quot;Member/Casual&quot;,
+       title = &quot;Average Riding Duration by Day: Members vs. Casual Riders&quot;)
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/avergae%20duration.png"/> 
+</figure>
+
+<pre><code class="language-{r}" data-lang="{r}">
+Cyclistic_trips_v1 %&gt;% 
+  group_by(month, member_casual) %&gt;% 
+  summarize(number_of_rides = n(), .groups = 'drop') %&gt;% 
+  filter(member_casual == 'casual') %&gt;%
+  drop_na() %&gt;%
+  ggplot(aes(x = month, y = number_of_rides, fill = member_casual)) + 
+  geom_bar(position = 'dodge', stat = 'identity') + scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45)) + 
+  labs(x = &quot;Month&quot;, y = &quot;Number of Rides&quot;, 
+       fill = &quot;Member/Casual&quot;,
+       title = &quot;Average Number of Rides by Month: Casual Riders&quot;)
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/Average%20Number%20of%20Rides%20by%20Month%20Casual%20Riders%20v2.png"/> 
+</figure>
+
+<pre><code class="language-{r}" data-lang="{r}">Cyclistic_trips_v1 %&gt;% 
+  group_by(month, member_casual) %&gt;% 
+  summarize(number_of_rides = n(), .groups = 'drop') %&gt;% 
+  filter(member_casual == 'member') %&gt;%
+  drop_na() %&gt;%
+  ggplot(aes(x = month, y = number_of_rides, fill = member_casual)) + 
+  geom_bar(position = 'dodge', stat = 'identity') + scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45)) + 
+  labs(x = &quot;Month&quot;, y = &quot;Number of Rides&quot;, 
+       fill = &quot;Member/Casual&quot;,
+       title = &quot;Average Number of Rides by Month: member Riders&quot;)
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/member.png"/> 
+</figure>
+
+<pre><code class="language-{r}" data-lang="{r}">ggplot(data = top_10_station_member) +
+  geom_col(aes(x = reorder(stations, station_count), y = station_count), fill = '#56B4E9') +
+  labs(title = &quot;Top 10 Used Stations by Members&quot;, y = &quot;Number of Rides&quot;, x = &quot;&quot;) +
+  scale_y_continuous(labels = scales::comma) +
+  coord_flip() +
+  theme_minimal()
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/Top%2010%20Used%20Stations%20by%20Members.png"/> 
+</figure>
+
+<pre><code class="language-{r}" data-lang="{r}">
+options(repr.plot.width = 14, repr.plot.height = 10)
+Cyclistic_trips_v1 %&gt;% 
+  group_by(month, member_casual, rideable_type) %&gt;% 
+  summarize(number_of_rides = n(), .groups = 'drop') %&gt;% 
+  drop_na() %&gt;% 
+  ggplot(aes(x = month, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = &quot;dodge&quot;) +
+  scale_y_continuous(labels = scales::comma) +
+  facet_grid(member_casual~rideable_type) +
+  labs(x = &quot;Month&quot;, y = &quot;Number of Rides&quot;, fill = &quot;Member/Casual&quot;,
+       title = &quot;Average Number of Rides by Month&quot;) +
+  theme(axis.text.x = element_text(angle = 90))
+
+</code></pre><figure>
+    <img src="https://da-murad.github.io/Murad-Portfolio/images/facet%20by%20month.png"/> 
+</figure>
+
+<h3 id="phase-fivesharing-the-figures-with-the-stakeholders">Phase five:sharing the figures with the stakeholders</h3>
+<ul>
+<li>Casual riders ride more during the weekend.</li>
+<li>Both causal and members prefer classic bikes while docked bikes not being used by casual.</li>
+<li>member riders who rides for a long duration.</li>
+<li>most trips rides in summer times ( july - August ) for both casual and member</li>
+</ul>
+<h3 id="recomendations">recomendations</h3>
+<ul>
+<li>
+<p>Offering incentives or offers to the most rides members and announcing them by placing banners in the locations of the most frequently used stations by casual riders to attract them</p>
+</li>
+<li>
+<p>Offering discounts on holidays or the most frequently used July-August months is (summer offers)</p>
+</li>
+</ul>
+<p><a href="https://github.com/DA-MURAD/Case-one-bike-sharing">link to GitHub Repository </a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://da-murad.github.io/Murad-Portfolio/tags/r-projects/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">R Projects</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://da-murad.github.io/Murad-Portfolio/" >
+    &copy;  Murad Farhan 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.linkedin.com/in/murad-farhan-455a79220/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
